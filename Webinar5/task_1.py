@@ -7,11 +7,11 @@
 
 
 def letter_stat(our_str):
-    '''
+    """
     Функция принимает на вход строку и возращает словарь
     :param our_str: входная строка
     :return: словарь, где в качестве ключей буквы строки, а значения - количество вхождений данной буквы в строку
-    '''
+    """
     letters_dict = {letter: our_str.count(letter) for letter in our_str}
     return letters_dict
 
