@@ -12,10 +12,11 @@ def segment(coord1: tuple, coord2: tuple):
     try:
         x1, y1 = coord1
         x2, y2 = coord2
-        return x1 + y1 + x2 + y2
+        result = x1 + y1 + x2 + y2
     except Exception as e:
         return str(e)[::-1]
-
+    else:
+        return result
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 

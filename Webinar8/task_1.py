@@ -26,16 +26,17 @@ def treatment_sum(our_tuple: tuple):
         float: сумма двух элементов кортежа.
     """
 
-    if len(our_tuple) < 2:
-        return "Недостаточно данных"
-    if len(our_tuple) > 2:
-        raise Exception("Много данных")
     try:
+        if len(our_tuple) > 2:
+            raise Exception("Много данных")
         a, b = our_tuple[0], our_tuple[1]
-        return a + b
-    except TypeError as e:
+        result = a + b
+    except TypeError:
         return "Нельзя сложить эти данные"
-
+    except IndexError:
+        return "Недостаточно данных"
+    else:
+        return result
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
